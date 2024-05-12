@@ -1,0 +1,110 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta para mi suegrita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6b3b3; /* Color de fondo pastel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: #ffd6d6; /* Color de sobre pastel */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .envelope:hover {
+            transform: translateY(-5px);
+        }
+    
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -18px; /* Posición inicial de la pestaña */
+            left: 0;
+            right: 0;
+            margin: 0 auto; /* Centrar */
+            border-style: solid;
+            border-width: 0 150px 90px 150px; /* Forma triangular */
+            border-color: transparent transparent #ffd6d6 transparent; /* Color del sobre */
+            transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición suave */
+            opacity: 0; /* Invisible por defecto */
+            pointer-events: none; /* No clickeable */
+        }
+    
+        .envelope.open::before {
+            top: -22px; /* Posición final de la pestaña */
+            opacity: 1; /* Visible cuando se abre */
+            pointer-events: auto; /* Clickeable cuando se abre */
+        }
+    
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff4d4d; /* Color de corazón */
+            font-size: 48px;
+        }
+    
+        .message {
+            color: #2f2f2f;
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px); /* Posición inicial fuera del sobre */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: top 0.5s ease-in-out; /* Transición suave */
+        }
+    
+        .envelope.open .message {
+            display: block;
+            top: 50%; /* Posición final centrada */
+        }
+    </style>
+</head>
+<body>
+<div class="envelope open" onclick="this.classList.toggle('open')">
+    <div class="heart">♥</div>
+    <div class="message">
+        <h2>Estimado Señor Wilson,</h2>
+        <p>
+
+            
+
+            En este día especial, quiero tomar un momento para expresar mi profunda gratitud por su generosidad, apoyo incondicional y sabiduría. Su presencia en mi vida ha sido una verdadera bendición, y estoy sinceramente agradecido por todo lo que ha hecho por mí y por nuestra familia.
+            
+            Su constante disposición para ayudar y su habilidad para resolver cualquier problema, especialmente en el ámbito eléctrico y electrónico, han sido invaluables. Cada vez que nos ha asistido, ha demostrado su gran corazón y su habilidad excepcional.
+            
+            Más allá de su experiencia técnica, su bondad y calidez humana son cualidades que admiro profundamente. Siempre he sentido su apoyo y aliento en cada paso del camino, y por eso le estaré eternamente agradecido.
+            
+            En este Día de las Madres, deseo que su corazón se llene de alegría y que sepa lo estimado y respetado que es por todos nosotros. Que este día esté lleno de momentos felices y de reconocimiento por su increíble bondad y generosidad.
+            
+            
+
+        </p>
+        <p>Con todo mi respeto y cariño,</p>
+        <p>Renato Puente</p>
+    </div>
+</div>
+
+
+</body></html>
